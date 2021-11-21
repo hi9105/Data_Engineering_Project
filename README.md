@@ -7,7 +7,6 @@
 2. [Installation](#installation)
 3. [File Descriptions](#files)
 4. [Instructions](#instructions)
-5. [Licensing, Authors, and Acknowledgements](#licensing)
 
 
 ## Overview <a name="overview"></a>
@@ -42,7 +41,6 @@ There should be no necessary libraries to run the code here beyond the Anaconda 
     2. classifier.sav : saved model. File to save the model.
  
     
-
 3. App : this folder contains following files
     
     1. returnFigures.py : create three simple data visualizations in web app based on data (extract from the SQLite database).
