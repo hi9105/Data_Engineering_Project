@@ -1,20 +1,24 @@
 # Project : Disaster Response
 
+
 ## Table of Contents
 
 1. [Overview](#overview)
 2. [Installation](#installation)
 3. [File Descriptions](#files)
-4. [Results](#results)
+4. [Instructions](#instructions)
 5. [Licensing, Authors, and Acknowledgements](#licensing)
+
 
 ## Overview <a name="overview"></a>
 
 In this project, we have a data set containing real messages that were sent during disaster events. We have created a machine learning pipeline to categorize these events so that we can send the messages to an appropriate disaster relief agency. We have included a web app where an emergency worker can input a new message and get classification results in several categories. The web app will also display visualizations of the data. 
 
+
 ## Installation <a name="installation"></a>
 
 There should be no necessary libraries to run the code here beyond the Anaconda distribution of Python.  The code should run with no issues using Python versions 3.*.
+
 
 ## File Descriptions <a name="files"></a>
 
@@ -49,7 +53,19 @@ There should be no necessary libraries to run the code here beyond the Anaconda 
     
         - master.html : main page of web app.
         - go.html : classification result page of web app.
-    
-    5. DisasterResponse.db : database for saving clean data
-    
+
+
+## Instructions <a name="instructions"></a>
+
+1. Run the following commands in the project's root directory to set up your database and model.
+
+    - To run ETL pipeline that cleans data and stores in database
+        `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
+    - To run ML pipeline that trains classifier and saves
+        `python models/train_classifier.py data/DisasterResponse.db models/classifier.sav`
+
+2. Run the following command in the app's directory to run your web app.
+    `python run.py`
+
+3. Go to http://0.0.0.0:3001/
  
