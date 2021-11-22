@@ -9,7 +9,7 @@ def load_data(messages_filepath, categories_filepath):
 				messages = pd.read_csv(messages_filepath)
 
 				# remove the 'original' column from data set
-				messages.drop(['original', 'genre'], axis=1, inplace=True)
+				messages.drop(columns=['original', 'genre'], axis=1, inplace=True)
 
 				# load categories dataset
 				categories = pd.read_csv(categories_filepath)
