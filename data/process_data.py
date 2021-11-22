@@ -36,11 +36,16 @@ def clean_data(df):
 
 				# Convert category values to just numbers 0 or 1.
 				for column in categories:
-									# set each value to be the last character of the string
+					
+					# set each value to be the last character of the string
     					categories[column] = categories.loc[:, column].str.split('-').str.get(1)
     
     					# convert column from string to numeric
     					categories[column] = categories[column].astype('int64')
+				
+				# drop rows where category 'related' = 2
+				categories_related_2 = categories[categories['related'] == 2]
+				categories.drop(categories_related_2.index, axis=0, inplace=True)
 
 				# drop the original categories column from `df`
 				df.drop('categories', axis=1, inplace=True)
