@@ -4,6 +4,19 @@ from sqlalchemy import create_engine
 
 
 def load_data(messages_filepath, categories_filepath):
+	
+				'''
+    				
+				Input Parameters:
+				
+        			messages_filepath : filepaths of the messages datasets.
+				categories_filepath : filepaths of the categories datasets.
+
+    				Returns:
+        			
+				df : data frame with combine messages and categories datasets.   
+    				
+				'''
 				
 				# load messages dataset
 				messages = pd.read_csv(messages_filepath)
